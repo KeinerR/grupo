@@ -1,0 +1,13 @@
+GET    http://localhost:3000/api/domicilio HTTP/1.1
+Content-Type: application/json
+
+{
+  "IdDomicilio": 6,
+  "IdPedido": 3,
+  "IdDomiciliario": 1,
+  "Observacion": "Entrega  para el Lunes",
+  "FechaEntrega": "2023-12-4",
+  "DireccionDomicilio": "Calle Principal 123",
+  "HoraEntrega": "12:00", 
+  "EstadoDomicilio": "Cancelado"
+}
