@@ -1,4 +1,4 @@
-Get     http://localhost:3000/api/domicilio HTTP/1.1
+POST      http://localhost:3000/api/domicilio HTTP/1.1
 Content-Type: application/json
 
 {
@@ -11,6 +11,8 @@ Content-Type: application/json
   "HoraEntrega": "12:00", 
   "EstadoDomicilio": "Pendiente"
 }
+###
+GET  http://localhost:3000/api/domicilio HTTP/1.1
 ###
 POST     http://localhost:3000/api/domicilio/6563e0cafcc1dbe118842149 HTTP/1.1
 ###

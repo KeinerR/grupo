@@ -39,4 +39,11 @@ router.put('/:id', (req, res) => {
         .catch((error) => res.json({ message: error }));
 });
 
+// Obtener todos los registros de domicilio
+router.get('/', (req, res) => {
+    Domicilio.find() // Buscar todos los domicilios en la base de datos
+        .then((data) => res.json(data)) // Enviar los registros como respuesta en formato JSON
+        .catch((error) => res.json({ message: error }));
+});
+
 module.exports = router;

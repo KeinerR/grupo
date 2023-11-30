@@ -8,7 +8,7 @@ router.post("/", (req, res) => {
     const newUser = new User({ Usuario, Contraseña });
     newUser
         .save()
-        .then((data) => res.status(201).json(data)) // Cambiado a 201 para indicar creación exitosa
+        .then((data) => res.status(201).json(data))
         .catch((error) => res.status(500).json({ message: error.message }));
 });
 
@@ -52,6 +52,13 @@ router.put("/:id", (req, res) => {
             }
             res.json(data);
         })
+        .catch((error) => res.status(500).json({ message: error.message }));
+});
+
+// Obtener todos los usuarios
+router.get("/", (req, res) => {
+    User.find()
+        .then((data) => res.json(data))
         .catch((error) => res.status(500).json({ message: error.message }));
 });
 
